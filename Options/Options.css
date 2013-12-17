@@ -1,0 +1,129 @@
+/*
+ShareMeNot is licensed under the MIT license:
+http://www.opensource.org/licenses/mit-license.php
+
+
+Copyright (c) 2012 University of Washington
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+/* Containers */
+body {
+	background-color: WindowFrame;
+	cursor: default;
+	user-select: none;
+	-webkit-user-select: none;
+}
+#container, #exceptionsManager {
+	background-color: Window;
+	color: WindowText;
+	font: message-box;
+	margin: 0 auto;
+	min-width: 35em;
+	padding: 1em;
+	width: 50%;
+}
+#exceptionsManagerContainer {
+	background: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: opacity 0.25s, visibility 0.25s;
+	-webkit-transition: opacity 0.25s, visibility 0.25s;
+	width: 100%;
+}
+#exceptionsManagerContainer.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+#exceptionsManagerContainer.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Text */
+p {
+	margin: 0;
+}
+h1 {
+	font: inherit;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+button {
+	color: ActiveCaption;
+	font: caption;
+}
+.descriptiveText {
+	font-size: smaller;
+}
+#automaticallyAddExceptionsContainer .hidden {
+	display: none;
+}
+#automaticallyAddExceptionsContainer .visible {
+	display: block;
+}
+
+/* Blocked Trackers Options */
+#blockedTrackersContainer {
+	margin: 1em 0;
+}
+#trackerOptions {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#trackerOptions li {
+	display: table-row;
+	padding: 2em 0;
+}
+.trackerEnabledLabel, .exceptionsButton {
+	display: table-cell;
+}
+.trackerEnabledLabel {
+	width: 100%;
+}
+
+/* Exceptions Manager */
+#exceptionsManager {
+	overflow: auto;
+	margin-top: 3em;
+	width: 40%;
+}
+#exceptionsList {
+	-webkit-appearance: listbox;
+	height: 15em;
+	list-style: none;
+	padding: 0.5em;
+}
+#exceptionsList li {
+	-webkit-appearance: listitem;
+}
+#addHostnamePatternField {
+	font: caption;
+	display: block;
+	width: 50%;
+}
+#closeButton {
+	float: right;
+}

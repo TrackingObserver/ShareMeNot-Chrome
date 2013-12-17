@@ -1,0 +1,100 @@
+<!-- 
+ShareMeNot is licensed under the MIT license:
+http://www.opensource.org/licenses/mit-license.php
+
+
+Copyright (c) 2012 University of Washington
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="Options.css">
+	
+	<script data-main="Options" src="../Shared/require.js"></script>
+	
+	<title>ShareMeNot Options</title>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<h1>ShareMeNot Options</h1>
+		</header>
+
+		<p>
+		<label class="generalOptionLabel">
+			<input type="checkbox" id="replaceButtonsCheckbox">
+			<span class="optionText">Replace social buttons with local versions<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(better privacy but may affect layout on some webpages)</span>
+		</label>
+		</p>
+
+		<fieldset id="blockedTrackersContainer">
+			<legend>Blocked Trackers</legend>
+			
+			<ul id="trackerOptions">
+				<!-- Prototype list element for listing each tracker -->
+				<li id="trackerOptionPrototype">
+					<label class="trackerEnabledLabel">
+						<input type="checkbox" class="enabledCheckbox">
+						<span class="trackerName"></span>
+					</label>
+					
+					<button class="exceptionsButton">
+						Exceptions…
+					</button>
+				</li>
+			</ul>
+		</fieldset>
+		
+		<p><a href="http://sharemenot.cs.washington.edu/Test%20Installation.shtml" target="_blank">Test your ShareMeNot installation…</a></p>
+	</div>
+	
+	<div id="exceptionsManagerContainer" class="hidden">
+		<div id="exceptionsManager">
+			<header>
+				<h1>
+					Manage Exceptions for <span class="trackerName"></span>
+				</h1>
+			</header>
+			
+			<p>
+				ShareMeNot will not block <span class="trackerName"></span> trackers on the following web pages.
+			</p>
+			
+			<ul id="exceptionsList">
+			</ul>
+			
+			<input type="text" placeholder="Add a new hostname pattern" id="addHostnamePatternField">
+			
+			<button id="removeAllExceptionsButton">
+				Remove All Exceptions
+			</button>
+			
+			<button id="closeButton">
+				Close
+			</button>
+		</div>
+	</div>
+</body>
+</html>
