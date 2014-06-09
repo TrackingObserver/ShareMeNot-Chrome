@@ -157,7 +157,7 @@ function addWebRequestFilter(callback) {
 		// only listen for HTTP requests for subframes or scripts contained within
 		// a main page with the URL patterns defined for the current tracker
 		var requestFilter = {
-	        	types: ["sub_frame", "script"],
+	        	types: ["sub_frame", "script", "image"],
 	        	urls: tracker.matchPatterns
 	    };
 		
@@ -186,7 +186,7 @@ function addWebRequestHeaderFilter(callback) {
 			// only listen for HTTP requests for subframes or scripts contained within
 			// a main page with the URL patterns defined for the current tracker
 			var requestFilter = {
-				types: ["sub_frame", "script"],
+				types: ["sub_frame", "script", "image"],
 				urls: tracker.matchPatterns
 			};
 
