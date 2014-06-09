@@ -146,11 +146,11 @@ function filterRequest(tabId, url, tracker) {
 		tabInfo[tabId].blockedTrackerCount[tracker.name] += 1;
 		
 		browserAbstractionLayer.showTrackerBlockedIcon(tabId);
-		console.log("Blocked request to " + url);
+		//console.log("Blocked request to " + url);
 		
 		return true;
 	} else {
-		console.log("Did not block request (might remove cookies) to " + url);
+		//console.log("Did not block request (might remove cookies) to " + url);
 		
 		return false;
 	}
