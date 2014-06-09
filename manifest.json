@@ -1,6 +1,6 @@
 {
 	"name": "ShareMeNot",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"manifest_version": 2,
 	
 	"description": "Prevents third-party buttons embedded by sites from tracking you until you actually click on them.",
